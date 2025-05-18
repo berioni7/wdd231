@@ -1,0 +1,92 @@
+[
+  {
+    "name": "O Boticário",
+    "industry": "Cosmetics and Beauty",
+    "location": "Brazil",
+    "website": "https://www.boticario.com.br",
+    "description": "One of the largest cosmetics companies in Latin America, offering perfumes, makeup, and skincare products.",
+    "founded": 1977,
+    "employees": 18000,
+    "logo": "images/i1.png"
+  },
+  {
+    "name": "Decathlon",
+    "industry": "Sporting Goods Retail",
+    "location": "France",
+    "website": "https://www.decathlon.com",
+    "description": "Global sports retailer offering a wide range of sporting goods and equipment for all sports.",
+    "founded": 1976,
+    "employees": 90000,
+    "logo": "images/i2.png"
+  },
+  {
+    "name": "Cacau Show",
+    "industry": "Confectionery",
+    "location": "Brazil",
+    "website": "https://www.cacaushow.com.br",
+    "description": "Largest chocolate franchise in Brazil, known for its chocolates and sweets.",
+    "founded": 1988,
+    "employees": 35000,
+    "logo": "images/i3.png"
+  },
+  {
+    "name": "Adidas",
+    "industry": "Sportswear and Apparel",
+    "location": "Germany",
+    "website": "https://www.adidas.com",
+    "description": "Leading global brand in sportswear, footwear, and accessories.",
+    "founded": 1949,
+    "employees": 62000,
+    "logo": "images/i4.png"
+  },
+  {
+    "name": "Kalunga",
+    "industry": "Office Supplies Retail",
+    "location": "Brazil",
+    "website": "https://www.kalunga.com.br",
+    "description": "Major Brazilian retailer specializing in office products, stationery, and electronics.",
+    "founded": 1972,
+    "employees": 3000,
+    "logo": "images/i5.png"
+  },
+  {
+    "name": "Giraffas",
+    "industry": "Fast Food",
+    "location": "Brazil",
+    "website": "https://www.giraffas.com.br",
+    "description": "Popular Brazilian fast-food chain serving burgers, meals, and snacks.",
+    "founded": 1981,
+    "employees": 8000,
+    "logo": "images/i6.png"
+  },
+  {
+    "name": "Cinépolis",
+    "industry": "Entertainment and Cinema",
+    "location": "Mexico",
+    "website": "https://www.cinepolis.com",
+    "description": "One of the largest cinema chains in Latin America, offering premium movie experiences.",
+    "founded": 1971,
+    "employees": 42000,
+    "logo": "images/i7.png"
+  },
+  {
+    "name": "Bauducco",
+    "industry": "Food and Bakery",
+    "location": "Brazil",
+    "website": "https://www.bauducco.com.br",
+    "description": "Leading Brazilian bakery company known for panettone and other baked goods.",
+    "founded": 1952,
+    "employees": 7000,
+    "logo": "images/i8.png"
+  },
+  {
+    "name": "New Era",
+    "industry": "Apparel and Accessories",
+    "location": "USA",
+    "website": "https://www.neweracap.com",
+    "description": "Global leader in headwear, especially known for sports caps and fashion accessories.",
+    "founded": 1920,
+    "employees": 1500,
+    "logo": "images/i9.png"
+  }
+]
