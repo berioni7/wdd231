@@ -7,6 +7,8 @@
     "description": "One of the largest cosmetics companies in Latin America, offering perfumes, makeup, and skincare products.",
     "founded": 1977,
     "employees": 18000,
+    "phone": "+55 41 3317-9000",
+    "address": "Rua das Flores, 123, Curitiba, Paraná, Brazil",
     "logo": "images/i1.png"
   },
   {
@@ -17,6 +19,8 @@
     "description": "Global sports retailer offering a wide range of sporting goods and equipment for all sports.",
     "founded": 1976,
     "employees": 90000,
+    "phone": "+33 1 30 48 88 88",
+    "address": "4 Boulevard de Mons, Villeneuve-d'Ascq, France",
     "logo": "images/i2.png"
   },
   {
@@ -27,6 +31,8 @@
     "description": "Largest chocolate franchise in Brazil, known for its chocolates and sweets.",
     "founded": 1988,
     "employees": 35000,
+    "phone": "+55 11 4003-3030",
+    "address": "Av. Paulista, 1500, São Paulo, Brazil",
     "logo": "images/i3.png"
   },
   {
@@ -37,6 +43,8 @@
     "description": "Leading global brand in sportswear, footwear, and accessories.",
     "founded": 1949,
     "employees": 62000,
+    "phone": "+49 9132 840",
+    "address": "Adi-Dassler-Strasse 1, Herzogenaurach, Germany",
     "logo": "images/i4.png"
   },
   {
@@ -47,6 +55,8 @@
     "description": "Major Brazilian retailer specializing in office products, stationery, and electronics.",
     "founded": 1972,
     "employees": 3000,
+    "phone": "+55 11 4003-5900",
+    "address": "Rua do Ouvidor, 500, São Paulo, Brazil",
     "logo": "images/i5.png"
   },
   {
@@ -57,6 +67,8 @@
     "description": "Popular Brazilian fast-food chain serving burgers, meals, and snacks.",
     "founded": 1981,
     "employees": 8000,
+    "phone": "+55 11 3003-4343",
+    "address": "Av. Paulista, 2000, São Paulo, Brazil",
     "logo": "images/i6.png"
   },
   {
@@ -67,6 +79,8 @@
     "description": "One of the largest cinema chains in Latin America, offering premium movie experiences.",
     "founded": 1971,
     "employees": 42000,
+    "phone": "+52 33 3000 3000",
+    "address": "Av. Vallarta 1200, Guadalajara, Mexico",
     "logo": "images/i7.png"
   },
   {
@@ -77,6 +91,8 @@
     "description": "Leading Brazilian bakery company known for panettone and other baked goods.",
     "founded": 1952,
     "employees": 7000,
+    "phone": "+55 11 3874-6000",
+    "address": "Rua General Furtado, 123, São Paulo, Brazil",
     "logo": "images/i8.png"
   },
   {
@@ -87,6 +103,8 @@
     "description": "Global leader in headwear, especially known for sports caps and fashion accessories.",
     "founded": 1920,
     "employees": 1500,
+    "phone": "+1 716-852-3300",
+    "address": "160 Delaware Avenue, Buffalo, NY, USA",
     "logo": "images/i9.png"
   }
 ]

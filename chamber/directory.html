@@ -1,143 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gabriel Berioni">
-    <meta name="discription" content="Directory page of Chamber of Commerce members, with contact information, services offered and membership levels.">
-    <link rel="stylesheet" href="css/style.css">
-    <meta property="og:title" content="Chamber of Commerce">
-    <meta property="og:description" content="Explore the local businesses associated with our chamber of commerce.">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://berioni7.github.io/wdd231/chamber/directory.html" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="js/directory.js" defer></script>
-    <title>Main page of the directory</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Gabriel Berioni" />
+  <meta name="description" content="Directory page of Chamber of Commerce members, with contact information, services offered and membership levels." />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta property="og:title" content="Chamber of Commerce" />
+  <meta property="og:description" content="Explore the local businesses associated with our chamber of commerce." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://berioni7.github.io/wdd231/chamber/directory.html" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <script src="js/directory.js" defer></script>
+  <title>Main page of the directory</title>
 </head>
 <body>
+
   <header>
     <h1 class="h1">Chamber of Commerce</h1>
-    <nav class="navbar">
-        <button class="nav-btn" onclick="location.href='index.html'">Home</button>
-        <button class="nav-btn" onclick="location.href='directory.html'">Directory</button>
+
+    <button id="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
+
+    <nav id="nav-menu" class="hidden">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="directory.html" class="nav-btn">Directory</a>
+      <a href="#members" class="nav-btn">Members</a>
+      <a href="#contact" class="nav-btn">Contact</a>
     </nav>
   </header>
 
   <main>
-    
-    <div class="view-toggle">
-      <button id="grid-view">Grid</button>
-      <button id="list-view">List</button>
-    </div>
+    <section class="view-toggle">
+      <button id="grid-view" class="active">Grid View</button>
+      <button id="list-view">List View</button>
+    </section>
 
-    <div id="members-container" class="grid-view">
-      <div class="card">
-        <img src="images/i1.jpg" alt="i1">
-        <div class="card-content">
-            <h3>Oboticário</h3>
-            <p>O Boticário is one of the largest cosmetics chains in Brazil, specializing in perfumes, make-up and personal care.
-                The company offers sustainable beauty products, with a strong presence in physical stores and online sales.
-                Its focus is to promote well-being and self-esteem through innovation and environmental responsibility.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i2.jpg" alt="i2">
-        <div class="card-content">
-            <h3>Decathlon</h3>
-            <p>Decathlon is a global chain of stores specializing in sporting goods for more than 60 sports.
-                It offers affordable, quality products developed by its own brands for beginners and professionals.
-                Its aim is to make sport accessible to everyone, promoting health, inclusion and sustainability.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i3.jpg" alt="i3">
-        <div class="card-content">
-            <h3>Cacau Show</h3>
-            <p>Cocoa Show is one of the largest fine chocolate chains in the world, with a strong presence in Brazil.
-                It offers a variety of products such as truffles, chocolates, tablets and themed gifts for different occasions.
-                The company stands out for the quality of its chocolate, its innovative flavors and its accessibility to different audiences.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i4.jpg" alt="i4">
-        <div class="card-content">
-            <h3>Adidas</h3>
-            <p>Adidas is one of the biggest sports brands in the world, focused on clothing, footwear and accessories for performance and style.
-                It develops products with advanced technology for professional athletes and casual consumers.
-                The brand is also known for its collaborations with artists and its cultural impact on urban and sports fashion.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i5.jpg" alt="i5">
-        <div class="card-content">
-            <h3>Kalunga</h3>
-            <p>Kalunga is a Brazilian company specializing in office supplies, computers and stationery.
-                It serves both individual consumers and companies, offering a wide range of products and services.
-                With physical stores and e-commerce, Kalunga is a benchmark in the sector for its practicality and diversity of items.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i6.jpg" alt="i6">
-        <div class="card-content">
-            <h3>Giraffas</h3>
-            <p>Giraffas is a Brazilian restaurant chain that offers quick meals with a homemade flavor.
-                Its menu combines traditional dishes such as rice, beans and meat with snacks and salads.
-                Present in several cities, the chain stands out for its good value for money and variety of choices.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i7.jpg" alt="i7">
-        <div class="card-content">
-            <h3>Cinépolis</h3>
-            <p>Cinépolis is one of the largest cinema chains in the world, present in several countries.
-                It offers modern cinemas with state-of-the-art technology, such as 3D, 4DX and VIP, for an immersive experience.
-                In addition to the movies, it also has complete bodegas and differentiated comfort in its units.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i8.jpg" alt="i8">
-        <div class="card-content">
-            <h3>Bauducco</h3>
-            <p>Bauducco is a traditional Brazilian company specializing in bakery products.
-                Famous for its panettones, it also produces cakes, toast, wafers and cookies.
-                It combines artisanal recipes with large-scale production, maintaining taste and quality.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="images/i9.jpg" alt="i9">
-        <div class="card-content">
-            <h3>New Era</h3>
-            <p>New Era is a global brand known for its sports caps and accessories.
-                Famous for its partnerships with sports leagues and teams, it offers products with modern design and quality.
-                The brand is a reference in urban culture, fashion and active lifestyle.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-      </div>
-
-    </div>
+    <section id="members-container" class="members-container grid-view">
+      <!-- Membership cards will be dynamically inserted here -->
+    </section>
   </main>
 
   <footer>
     <p>Gabriel Berioni - WDD 231</p>
     <p>&copy; <span id="year"></span> | Last modification: <span id="lastModified"></span></p>
-    <p class="p1">chamber@gmail.com</p>
-    <p class="p2">(555) 555-1234</p>
+    <p>chamber@gmail.com</p>
+    <p>(555) 555-1234</p>
   </footer>
 
 </body>
