@@ -9,7 +9,8 @@
     "employees": 18000,
     "phone": "+55 41 3317-9000",
     "address": "Rua das Flores, 123, Curitiba, Paraná, Brazil",
-    "logo": "images/i1.png"
+    "logo": "images/i1.png",
+    "membership": "Gold"
   },
   {
     "name": "Decathlon",
@@ -21,7 +22,8 @@
     "employees": 90000,
     "phone": "+33 1 30 48 88 88",
     "address": "4 Boulevard de Mons, Villeneuve-d'Ascq, France",
-    "logo": "images/i2.png"
+    "logo": "images/i2.png",
+    "membership": "Silver"
   },
   {
     "name": "Cacau Show",
@@ -33,7 +35,8 @@
     "employees": 35000,
     "phone": "+55 11 4003-3030",
     "address": "Av. Paulista, 1500, São Paulo, Brazil",
-    "logo": "images/i3.png"
+    "logo": "images/i3.png",
+    "membership": "Gold"
   },
   {
     "name": "Adidas",

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Gabriel Berioni">
+  <meta name="description" content="Main page of the chamber commerce" />
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:title" content="Chamber of Commerce">
+  <meta property="og:description" content="Home page of the chamber commerce">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://berioni7.github.io/wdd231/chamber/directory.html">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="js/directory.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <title>Home page</title>
+</head>
+<body>
+
+  <header>
+    <h1 class="h1">Home</h1>
+
+    <button id="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
+
+    <nav id="nav-menu" class="hidden">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="directory.html" class="nav-btn">Directory</a>
+      <a href="#members" class="nav-btn">Members</a>
+      <a href="#contact" class="nav-btn">Contact</a>
+    </nav>
+  </header>
+
+  <nav class="secondary-nav">
+    <button class="sec-btn" onclick="location.href='index.html'">Home</button>
+    <button class="sec-btn" onclick="location.href='directory.html'">Chamber</button>
+    <button class="sec-btn" onclick="location.href='#contact'">Contact</button>
+    <button class="sec-btn" onclick="location.href='#members'">Members</button>
+  </nav>
+
+  <section class="hero">
+    <img src="images/m1.jpg" alt="Chamber of Commerce Hero Image">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Welcome to Our Chamber</h2>
+      <p>Connecting businesses for a stronger community</p>
+    </div>
+  </section>
+
+  <section class="join-section">
+    <button class="join-btn">Join the Chamber</button>
+  </section>
+
+  <main>
+    <h1 class="l1">Chamber's events: </h1>
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+            <div id="slides">
+                 <div id="overflow">
+                     <div class="inner">
+                        <div class="slide slide_1">
+                            <div class="slide-content">
+                                <h2>Meeting of businesses</h2>
+                            </div>
+                        </div>
+                        <div class="slide slide_2">
+                            <div class="slide-content">
+                                <h2>Future of digital sales</h2>
+                            </div>
+                        </div>
+                        <div class="slide slide_3">
+                            <div class="slide-content">
+                                <h2>Financial security</h2>
+                            </div>
+                        </div>
+                        <div class="slide slide_4">
+                            <div class="slide-content">
+                                <h2>Financial relationships</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   <div id="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+   <div id="bullets">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+</div>
+     <h2 class="w">Check out our weather for the next three days!</h2>
+
+    <section class="weather">
+    <h2>Weather: </h2>
+    <div class="weather-cards">
+    <div class="card current-weather">
+      <h3>Now</h3>
+      <p class="temp"></p>
+      <p class="description"></p>
+    </div>
+    <div class="forecast">
+      <div class="card day1">
+        <h3>Day 1</h3>
+        <p class="temp"></p>
+      </div>
+      <div class="card day2">
+        <h3>Day 2</h3>
+        <p class="temp"></p>
+      </div>
+      <div class="card day3">
+        <h3>Day 3</h3>
+        <p class="temp"></p>
+      </div>
+        </div>
+    </div>
+    </section>
+
+     <section class="spotlights">
+    <h2>Featured Companies</h2>
+        <div id="spotlight-cards" class="spotlight-cards"></div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>Gabriel Berioni - WDD 231</p>
+    <p>&copy; <span id="year"></span> | Last modification: <span id="lastModified"></span></p>
+    <p>chamber@gmail.com</p>
+    <p>(555) 555-1234</p>
+  </footer>
+
+</body>
+</html>

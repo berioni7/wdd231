@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-  // Toggle do menu hambúrguer
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const navMenu = document.getElementById("nav-menu");
 
@@ -144,3 +143,120 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+const apiKey = '6da9767d31efd9546e30521b7bc64bb6';
+const lat = -23.26;
+const lon = -47.29;
+
+const currentTempEl = document.querySelector('.current-weather .temp');
+const currentDescEl = document.querySelector('.current-weather .description');
+
+const day1TempEl = document.querySelector('.day1 .temp');
+const day2TempEl = document.querySelector('.day2 .temp');
+const day3TempEl = document.querySelector('.day3 .temp');
+
+const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=en&appid=${apiKey}`;
+
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=en&appid=${apiKey}`;
+
+async function getCurrentWeather() {
+  try {
+    const response = await fetch(currentWeatherUrl);
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+    const data = await response.json();
+    currentTempEl.textContent = `${Math.round(data.main.temp)}°C`;
+    currentDescEl.textContent = data.weather[0].description;
+  } catch (error) {
+    console.error('Error fetching current weather:', error);
+    currentTempEl.textContent = 'Error';
+    currentDescEl.textContent = 'Unable to get data.';
+  }
+}
+
+async function getForecast() {
+  try {
+    const response = await fetch(forecastUrl);
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+    const data = await response.json();
+
+    const middayForecasts = data.list.filter(forecast => forecast.dt_txt.includes('12:00:00'));
+
+    if (middayForecasts.length >= 3) {
+      day1TempEl.textContent = `${Math.round(middayForecasts[0].main.temp)}°C`;
+      day2TempEl.textContent = `${Math.round(middayForecasts[1].main.temp)}°C`;
+      day3TempEl.textContent = `${Math.round(middayForecasts[2].main.temp)}°C`;
+    } else {
+      day1TempEl.textContent = 'N/A';
+      day2TempEl.textContent = 'N/A';
+      day3TempEl.textContent = 'N/A';
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    day1TempEl.textContent = 'Error';
+    day2TempEl.textContent = 'Error';
+    day3TempEl.textContent = 'Error';
+  }
+}
+
+getCurrentWeather();
+getForecast();
+
+const companies = [
+  {
+    name: "O Boticário",
+    phone: "+55 41 3317-9000",
+    address: "Rua das Flores, 123, Curitiba, Paraná, Brazil",
+    website: "https://www.boticario.com.br",
+    membership: "Gold"
+  },
+  {
+    name: "Decathlon",
+    phone: "+33 1 30 48 88 88",
+    address: "4 Boulevard de Mons, Villeneuve-d'Ascq, France",
+    website: "https://www.decathlon.com",
+    membership: "Silver"
+  },
+  {
+    name: "Cacau Show",
+    phone: "+55 11 4003-3030",
+    address: "Av. Paulista, 1500, São Paulo, Brazil",
+    website: "https://www.cacaushow.com.br",
+    membership: "Gold"
+  }
+];
+
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+function showSpotlights() {
+  const container = document.getElementById('spotlight-cards');
+
+  const eligibleCompanies = companies.filter(c => c.membership === 'Gold' || c.membership === 'Silver');
+
+  const shuffled = shuffleArray(eligibleCompanies);
+  const count = Math.floor(Math.random() * 2) + 2; 
+  const selected = shuffled.slice(0, count);
+
+  container.innerHTML = ''; 
+
+  const images = ['images/i1.jpg', 'images/i2.jpg', 'images/i3.jpg'];
+
+  selected.forEach((company, index) => {
+    const card = document.createElement('div');
+    card.classList.add('spotlight-card');
+    card.innerHTML = `
+      <img src="${images[index]}" alt="${company.name} Logo" class="spotlight-logo" />
+      <h3>${company.name}</h3>
+      <p><strong>Phone:</strong> ${company.phone}</p>
+      <p><strong>Address:</strong> ${company.address}</p>
+      <p><strong>Website:</strong> <a href="${company.website}" target="_blank" rel="noopener">${company.website}</a></p>
+      <p class="membership-level">${company.membership} Member</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+showSpotlights();
+
