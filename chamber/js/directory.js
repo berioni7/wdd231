@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
 const apiKey = '6da9767d31efd9546e30521b7bc64bb6';
 const lat = -23.26;
 const lon = -47.29;
@@ -238,6 +237,7 @@ function showSpotlights() {
   const shuffled = shuffleArray(eligibleCompanies);
   const count = Math.floor(Math.random() * 2) + 2; 
   const selected = shuffled.slice(0, count);
+  const mainfield = shuffleArray.slice(0, count);
 
   container.innerHTML = ''; 
 
@@ -257,6 +257,3 @@ function showSpotlights() {
     container.appendChild(card);
   });
 }
-
-showSpotlights();
-

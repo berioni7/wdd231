@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Gabriel Berioni">
+  <meta name="description" content="Join page for the chamber of commerce." />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/join.css">
+  <meta property="og:title" content="Chamber of Commerce">
+  <meta property="og:description" content="Join page of the chamber commerce">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://berioni7.github.io/wdd231/chamber/directory.html">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="js/directory.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/join.js" defer></script>
+  <title>Join Us</title>
+</head>
+<body>
+
+  <header>
+    <h1 class="h1">Home</h1>
+
+    <button id="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
+
+    <nav id="nav-menu" class="hidden">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="directory.html" class="nav-btn">Directory</a>
+      <a href="#members" class="nav-btn">Members</a>
+      <a href="join.html" class="nav-btn">Join Us</a>
+    </nav>
+  </header>
+
+  <nav class="secondary-nav">
+    <button class="sec-btn" onclick="location.href='index.html'">Home</button>
+    <button class="sec-btn" onclick="location.href='directory.html'">Chamber</button>
+    <button class="sec-btn" onclick="location.href='#contact'">Contact</button>
+    <button class="sec-btn" onclick="location.href='#members'">Members</button>
+  </nav>
+
+  <main>
+    <h2>Join the Chamber</h2>
+
+    <form method="get" action="thankyou.html">
+      <label>First Name:
+        <input type="text" name="firstName" required>
+      </label>
+
+      <label>Last Name:
+        <input type="text" name="lastName" required>
+      </label>
+
+      <label>Title/Position:
+        <input type="text" name="title" pattern=".{7,}" title="Minimum 7 characters">
+      </label>
+
+      <label>Email:
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </label>
+
+      <label>Phone:
+        <input type="tel" name="phone" required>
+      </label>
+
+      <label>Organization Name:
+        <input type="text" name="organization" required>
+      </label>
+
+      <label>Membership Level:
+        <select name="membership" required>
+          <option value="">Select</option>
+          <option value="np">NP Membership</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>Organization Description:
+        <textarea name="description" rows="4"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp">
+
+      <button type="submit">Join Now</button>
+    </form>
+
+    
+  </main>
+
+  <footer>
+    <p>Gabriel Berioni - WDD 231</p>
+    <p>&copy; <span id="year"></span> | Last modification: <span id="lastModified"></span></p>
+    <p>chamber@gmail.com</p>
+    <p>(555) 555-1234</p>
+  </footer>
+
+</body>
+</html>

@@ -7,3 +7,5 @@ setInterval(() => {
   current = (current + 1) % total;
   slides[current].checked = true;
 }, 4000); 
+
+
