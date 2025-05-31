@@ -1,0 +1,193 @@
+/* Reset and basic */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* Layout */
+.join-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.form-section {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  animation: fadeInLeft 1s ease;
+}
+
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1 1 300px;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card.np { background: #6c757d; }
+.card.bronze { background: #cd7f32; }
+.card.silver { background: #c0c0c0; }
+.card.gold { background: #ffd700; color: #333; }
+
+button, .modal-link {
+  background: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, .modal-link:hover {
+  background: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .join-main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .membership-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  color: #333; 
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  border: 2px solid transparent; 
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.card.bronze {
+  --grad: linear-gradient(135deg, #cd7f32, #a97142, #cd7f32);
+  border-color: rgba(139, 69, 19, 0.8);
+  color: #5a3e1a;
+}
+
+.card.silver {
+  --grad: linear-gradient(135deg, #e6e8e6, #c0c0c0, #f5f5f5);
+  border-color: rgba(192, 192, 192, 0.8);
+  color: #555;
+}
+
+.card.gold {
+  --grad: linear-gradient(135deg, #ffd700, #e5c100, #fff8dc);
+  border-color: rgba(184, 134, 11, 0.8);
+  color: #665b00;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--grad);
+  z-index: 0;
+  transition: width 0.6s ease;
+  transform-origin: bottom left;
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.card:hover::before {
+  width: 100%;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.6s ease;
+}
+
+.card.bronze:hover > * {
+  color: white;
+}
+.card.silver:hover > * {
+  color: #333;
+}
+.card.gold:hover > * {
+  color: #333;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-10px);
+}
+
+

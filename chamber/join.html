@@ -1,100 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Gabriel Berioni">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Gabriel Berioni" />
   <meta name="description" content="Join page for the chamber of commerce." />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/join.css">
-  <meta property="og:title" content="Chamber of Commerce">
-  <meta property="og:description" content="Join page of the chamber commerce">
-  <meta property="og:image" content="images/og-image.jpg">
-  <meta property="og:url" content="https://berioni7.github.io/wdd231/chamber/directory.html">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/join.css" />
+  <meta property="og:title" content="Chamber of Commerce" />
+  <meta property="og:description" content="Join page of the chamber commerce" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://berioni7.github.io/wdd231/chamber/directory.html" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <script src="js/directory.js" defer></script>
-  <script src="js/carousel.js" defer></script>
-  <script src="js/join.js" defer></script>
+  <link rel="stylesheet" href="../chamber/css/join.css" />
+  <script src="js/join-form.js"></script>
+
   <title>Join Us</title>
 </head>
 <body>
-
-  <header>
-    <h1 class="h1">Home</h1>
-
-    <button id="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
-
-    <nav id="nav-menu" class="hidden">
-      <a href="index.html" class="nav-btn">Home</a>
-      <a href="directory.html" class="nav-btn">Directory</a>
-      <a href="#members" class="nav-btn">Members</a>
-      <a href="join.html" class="nav-btn">Join Us</a>
-    </nav>
-  </header>
-
-  <nav class="secondary-nav">
-    <button class="sec-btn" onclick="location.href='index.html'">Home</button>
-    <button class="sec-btn" onclick="location.href='directory.html'">Chamber</button>
-    <button class="sec-btn" onclick="location.href='#contact'">Contact</button>
-    <button class="sec-btn" onclick="location.href='#members'">Members</button>
+<header>
+  <h1 class="h1">Home</h1>
+  <button id="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
+  <nav id="nav-menu" class="hidden">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="directory.html" class="nav-btn">Directory</a>
+    <a href="#members" class="nav-btn">Members</a>
+    <a href="join.html" class="nav-btn">Join Us</a>
   </nav>
+</header>
 
-  <main>
+<nav class="secondary-nav">
+  <button class="sec-btn" onclick="location.href='index.html'">Home</button>
+  <button class="sec-btn" onclick="location.href='directory.html'">Chamber</button>
+  <button class="sec-btn" onclick="location.href='join.html'">Join Us</button>
+  <button class="sec-btn" onclick="location.href='#members'">Members</button>
+</nav>
+
+<main class="join-main">
+  <section class="form-section">
     <h2>Join the Chamber</h2>
+    <form id="joinForm">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required />
 
-    <form method="get" action="thankyou.html">
-      <label>First Name:
-        <input type="text" name="firstName" required>
-      </label>
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" required />
 
-      <label>Last Name:
-        <input type="text" name="lastName" required>
-      </label>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="you@gmail.com" />
 
-      <label>Title/Position:
-        <input type="text" name="title" pattern=".{7,}" title="Minimum 7 characters">
-      </label>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" />
 
-      <label>Email:
-        <input type="email" name="email" placeholder="you@example.com" required>
-      </label>
+      <label for="organization">Organization:</label>
+      <input type="text" id="organization" name="organization" required />
 
-      <label>Phone:
-        <input type="tel" name="phone" required>
-      </label>
+      <label for="orgDescription">Organization Description:</label>
+      <textarea
+        id="orgDescription"
+        name="orgDescription"
+        rows="4"
+        cols="30"
+        placeholder="Describe your organization..."
+      ></textarea>
 
-      <label>Organization Name:
-        <input type="text" name="organization" required>
-      </label>
+      <label for="membership">Membership Level:</label>
+      <select id="membership" name="membership" required>
+        <option value="">Select...</option>
+        <option value="np">NP</option>
+        <option value="bronze">Bronze</option>
+        <option value="silver">Silver</option>
+        <option value="gold">Gold</option>
+      </select>
 
-      <label>Membership Level:
-        <select name="membership" required>
-          <option value="">Select</option>
-          <option value="np">NP Membership</option>
-          <option value="bronze">Bronze Membership</option>
-          <option value="silver">Silver Membership</option>
-          <option value="gold">Gold Membership</option>
-        </select>
-      </label>
+      <!-- Hidden timestamp field -->
+      <input type="hidden" id="timestamp" name="timestamp" value="" />
 
-      <label>Organization Description:
-        <textarea name="description" rows="4"></textarea>
-      </label>
-
-      <input type="hidden" name="timestamp" id="timestamp">
-
-      <button type="submit">Join Now</button>
+      <button type="submit">Submit</button>
     </form>
+  </section>
 
-    
-  </main>
+  <section class="membership-cards">
+    <div class="card np">
+      <h3>NP Membership</h3>
+      <p>Ideal for connecting with the community and participating in basic events.</p>
+      <button class="modal-link" data-modal="npModal">More Info</button>
+    </div>
 
-  <footer>
-    <p>Gabriel Berioni - WDD 231</p>
-    <p>&copy; <span id="year"></span> | Last modification: <span id="lastModified"></span></p>
-    <p>chamber@gmail.com</p>
-    <p>(555) 555-1234</p>
-  </footer>
+    <div class="card bronze">
+      <h3>Bronze Membership</h3>
+      <p>Great for small businesses wanting visibility and training resources.</p>
+      <button class="modal-link" data-modal="bronzeModal">More Info</button>
+    </div>
 
+    <div class="card silver">
+      <h3>Silver Membership</h3>
+      <p>Perfect for those seeking prominence and event sponsorship.</p>
+      <button class="modal-link" data-modal="silverModal">More Info</button>
+    </div>
+
+    <div class="card gold">
+      <h3>Gold Membership</h3>
+      <p>Complete experience with premium support and VIP events.</p>
+      <button class="modal-link" data-modal="goldModal">More Info</button>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="npModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>NP Membership Benefits</h3>
+      <p>Access to networking, updates, and volunteer opportunities.</p>
+    </div>
+  </div>
+
+  <div id="bronzeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Bronze Membership Benefits</h3>
+      <p>Business promotion and training workshops.</p>
+    </div>
+  </div>
+
+  <div id="silverModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Silver Membership Benefits</h3>
+      <p>Priority listings, event sponsorships, exclusive seminars.</p>
+    </div>
+  </div>
+
+  <div id="goldModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Gold Membership Benefits</h3>
+      <p>Premium marketing, leadership roles, VIP networking.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Gabriel Berioni - WDD 231</p>
+  <p>
+    &copy; <span id="year"></span> | Last modification:
+    <span id="lastModified"></span>
+  </p>
+  <p>chamber@gmail.com</p>
+  <p>(555) 555-1234</p>
+</footer>
 </body>
 </html>

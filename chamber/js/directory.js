@@ -237,7 +237,7 @@ function showSpotlights() {
   const shuffled = shuffleArray(eligibleCompanies);
   const count = Math.floor(Math.random() * 2) + 2; 
   const selected = shuffled.slice(0, count);
-  const mainfield = shuffleArray.slice(0, count);
+  const mainfield = shuffled.slice(0, count);
 
   container.innerHTML = ''; 
 
@@ -257,3 +257,40 @@ function showSpotlights() {
     container.appendChild(card);
   });
 }
+
+document.querySelectorAll('.modal-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modalId = this.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'block';
+  });
+});
+
+document.querySelectorAll('.close').forEach(span => {
+  span.addEventListener('click', function() {
+    this.closest('.modal').style.display = 'none';
+  });
+});
+
+window.addEventListener('click', function(e) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
+
+document.getElementById('joinForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you for joining!');
+});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const timestampInput = document.getElementById('timestamp');
+    if (timestampInput) {
+      const now = new Date().toISOString();
+      timestampInput.value = now;
+    }
+  });
+
+  
