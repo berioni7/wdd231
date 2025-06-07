@@ -1,0 +1,10 @@
+header, footer {
+    background: #2d728f;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+}
