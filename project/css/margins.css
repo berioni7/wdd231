@@ -849,4 +849,10 @@ footer {
   }
 }
 
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0deg)); 
+}
 
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+  text-rendering: auto; 
+}
