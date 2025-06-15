@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Central Park",
+    "image": "images/central-park.webp",
+    "address": "123 Park Avenue",
+    "description": "A large city park with gardens and walking trails."
+  },
+  {
+    "name": "City Museum",
+    "image": "images/city-museum.webp",
+    "address": "456 Museum Street",
+    "description": "A museum showcasing the history and culture of the city."
+  },
+  {
+    "name": "Botanical Garden",
+    "image": "images/botanical-garden.webp",
+    "address": "789 Greenway Blvd",
+    "description": "A collection of exotic and native plants."
+  },
+  {
+    "name": "Historic Castle",
+    "image": "images/historic-castle.webp",
+    "address": "101 Castle Road",
+    "description": "A medieval castle open for tours."
+  },
+  {
+    "name": "Art Gallery",
+    "image": "images/art-gallery.webp",
+    "address": "202 Art Street",
+    "description": "A modern art gallery with rotating exhibits."
+  },
+  {
+    "name": "Aquarium",
+    "image": "images/aquarium.webp",
+    "address": "303 Ocean Drive",
+    "description": "An aquarium featuring marine life from around the world."
+  },
+  {
+    "name": "Zoo",
+    "image": "images/zoo.webp",
+    "address": "404 Animal Lane",
+    "description": "A zoo housing animals from all continents."
+  },
+  {
+    "name": "Science Center",
+    "image": "images/science-center.webp",
+    "address": "505 Science Ave",
+    "description": "Interactive exhibits and scientific demonstrations."
+  }
+]

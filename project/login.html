@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Margins©</title>
+    <meta name="author" content="Gabriel Berioni">
+    <meta name="discription" content="The Margins© welcome page.">
+    <script src="js/margins.js" defer></script>
+    <link rel="stylesheet" href="css/margins.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Margins©">
+    <meta property="og:description" content="Home page of the Margins©">
+    <meta property="og:image" content="images/og-image.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=login" />
+    
+</head>
+<body>
+    <header>
+        <img src="images/margins(2).jpg" alt="margins©" loading="lazy" class="i1">
+    <form class="search-bar">
+      <input type="text" placeholder="Search books..." id="searchInput">
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+
+    <button id="loginBtn">Login</button>
+    <div id="logoutModal" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%);
+     background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px black; z-index:1000;">
+    <p>Are you sure you want to logout?</p>
+    <button id="confirmLogout">Yes</button>
+    <button id="cancelLogout">No</button>
+    </div>
+    </div>
+
+    </header>
+
+    <nav class="main-nav">
+        <a href="mybooks.html" class="nav-btn">My Books</a>
+        <a href="myreviews.html" class="nav-btn">My Reviews</a>
+        <a href="aboutus.html" class="nav-btn">About Us</a>
+    </nav>
+
+    <body class="login-body">
+  <main class="form-container">
+    <h1 class="form-title">Login</h1>
+    <form id="loginForm" class="form">
+      <input type="text" id="loginUsername" placeholder="Username" required />
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <p class="info">Password must be at least 8 characters including letters and numbers.</p>
+      <button type="submit" class="submit-btn">Login</button>
+      <p class="error-msg" id="loginError"></p>
+    </form>
+
+    <p class="account-link">Don't have an account? <a href="createaccount.html" id="showRegister">Create one</a></p>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+        <p class="p4">Gabriel Berioni | 2025 | Margins &copy;</p>
+    </div>
+
+    <hr class="footer-line">
+    <div class="footer-contact">
+        <p class="p4">Email: support.margins@gmail.com</p>
+        <p class="p4">Phone: +1 (312) 555-7890</p>
+        <p class="p4">Address: 123 W Literature Ave, Chicago, IL 60601, USA</p>
+        <p class="p4">Customer Service Hours: Mon–Fri, 9AM–6PM (CST)</p>
+    </div>
+  </footer>
+
+</body>
+</html>

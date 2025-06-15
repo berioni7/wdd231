@@ -293,4 +293,64 @@ document.getElementById('joinForm').addEventListener('submit', function(e) {
     }
   });
 
-  
+// Função para mostrar mensagem de visita
+function showVisitorMessage() {
+  const messageElement = document.getElementById("visitor-message");
+  const lastVisit = localStorage.getItem("lastVisit");
+
+  const now = Date.now();
+  localStorage.setItem("lastVisit", now);
+
+  if (!lastVisit) {
+    messageElement.textContent = "Welcome! Let us know if you have any questions.";
+    return;
+  }
+
+  const lastVisitDate = parseInt(lastVisit);
+  const diffTime = now - lastVisitDate;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays < 1) {
+    messageElement.textContent = "Back so soon! Awesome!";
+  } else {
+    messageElement.textContent = `You last visited ${diffDays} ${diffDays === 1 ? "day" : "days"} ago.`;
+  }
+}
+
+
+async function loadDiscoverCards() {
+  try {
+    const response = await fetch("./discover.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const items = await response.json();
+
+    const grid = document.getElementById("discover-grid");
+
+    items.forEach((item, index) => {
+      const article = document.createElement("article");
+      article.style.gridArea = `card${index + 1}`;
+
+      article.innerHTML = `
+        <h2>${item.name}</h2>
+        <figure>
+          <img src="${item.image}" alt="${item.name}">
+        </figure>
+        <address>${item.address}</address>
+        <p>${item.description}</p>
+        <button onclick="alert('More info about ${item.name}')">Learn more</button>
+      `;
+
+      grid.appendChild(article);
+    });
+  } catch (error) {
+    console.error("Error loading discover cards:", error);
+  }
+}
+
+showVisitorMessage();
+loadDiscoverCards();
+
+
