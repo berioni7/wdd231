@@ -330,9 +330,7 @@ header {
   text-align: center;
 }
 
-.hidden {
-  display: none !important;
-}
+
 
 .t2 {
     font-family: 'Poppins', sans-serif;
@@ -648,99 +646,9 @@ footer {
   color: #FFD700;
 }
 
-@media (max-width: 767px) {
-
-  .t1 {
-    font-size: 2.5em;
-    margin-left: 20px;
-    margin-top: 50px;
-  }
-
-  .p1 {
-    font-size: 1.1em;
-    max-width: 90%;
-    margin-left: 20px;
-    margin-top: 10px;
-  }
-
-  .i6 {
-    width: 120px;
-    margin: 20px auto 0 auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-  }
-
-  .container-i7 {
-    display: flex;
-    justify-content: center; 
-    gap: 10px; 
-  }
-
-  .i7 {
-    width: 40px;
-    height: auto;
-    display: block; 
-  }
-
-  .carousel-container {
-    position: static;
-    width: 340px;
-    height: auto;
-    margin: 20px auto;
-    box-shadow: none;
-    border-radius: 0;
-  }
-
-  .carousel-slide img {
-    height: auto;
-  }
-
-  .t2 {
-    font-size: 2.8em;
-    max-width: 90%;
-    margin-left: 20px;
-    margin-top: 60px;
-  }
-
-  .p2 {
-    font-size: 1.3em;
-    max-width: 90%;
-    margin-left: 20px;
-    margin-top: 10px;
-  }
-
-  .t3 {
-    font-size: 2em;
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-
-  .form-container {
-    padding: 3em 1em;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #registerForm {
-    padding: 2em 1em;
-    width: 90%;
-    margin: 30px auto;
-  }
-
-  .t4 {
-    font-size: 1.8em;
-    margin-top: 80px;
-    padding: 0 20px;
+@media (max-width: 600px) {
+  body, html {
     text-align: center;
-  }
-
-  .p3 {
-    font-size: 1.2em;
-    max-width: 90%;
-    margin: 0 auto;
   }
 
   header {
@@ -748,159 +656,196 @@ footer {
     padding: 1rem;
   }
 
-  .search-bar {
-    max-width: 100%;
-    margin: 10px 0;
-  }
-
-  .search-bar input[type="text"] {
-    font-size: 0.9rem;
-  }
-
-  .nav-btn {
-    padding: 0.7rem 0;
-    font-size: 0.9rem;
-  }
-
   .i1 {
-    height: 40px;
+    height: 40px; 
+    margin-left: 0;
+    margin-bottom: 0.5rem;
   }
 
   #profileBtn,
   #loginBtn,
   #login-btn {
-    font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .search-bar input[type="text"] {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .search-bar button {
+    height: 34px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .t1, .t2 {
+    font-size: 2.5em !important;
+    margin-left: 0 !important;
+    margin-top: 60px !important;
+    max-width: 90% !important;
+    text-align: center;
+  }
+
+  .p1, .p2, .p3 {
+    font-size: 1rem !important;
+    max-width: 90% !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+    margin: 0 auto 1rem auto !important;
+  }
+
+  .i6 {
+    width: 90% !important;
+    max-width: 300px;
+    margin: 20px auto -50px auto !important;
+    display: block;
+  }
+
+  .carousel-container {
+    width: 90% !important;
+    height: auto !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 40px auto;
+  }
+
+  .carousel-slide img {
+    height: auto !important;
+  }
+
+  .form-container, #registerForm {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 2rem !important;
+  }
+
+  .form-title {
+    font-size: 1.5rem !important;
+  }
+
+  .submit-btn, #login-btn {
+    font-size: 0.9rem !important;
+    padding: 0.5rem !important;
+    width: 100% !important;
   }
 
   footer {
     height: auto;
-    padding: 20px;
-  }
-
-  body::before {
-    width: 400px;
-    height: 400px;
-    right: -60px;
-    top: 0;
-  }
-
-}
-
-@media (min-width: 1200px) {
-
-  .t1 {
-    font-size: 6.5em;
-    margin-left: 140px;
-    margin-top: 140px;
-  }
-
-  .p1 {
-    font-size: 1.8em;
-    max-width: 450px;
-    margin-left: 140px;
-    margin-top: -25px;
-  }
-
-  .i6 {
-    width: 700px;
-    margin-left: 850px;
-    margin-top: -450px;
-  }
-
-  .i7 {
-    width: 70px;
-    padding: 30px;
-    margin-left: 110px;
-  }
-
-  .carousel-container {
-    width: 650px;
-    height: 500px;
-    top: 1100px;
-    left: 850px;
-  }
-
-  .t2 {
-    font-size: 6em;
-    max-width: 700px;
-    margin-left: 130px;
-    margin-top: 140px;
-  }
-
-  .p2 {
-    font-size: 3em;
-    max-width: 500px;
-    margin-left: 130px;
-    margin-top: -20px;
+    padding: 2rem 1rem;
+    text-align: center;
   }
 
   .t3 {
-    font-size: 4.2em;
-    margin-left: 1000px;
-    margin-top: -320px;
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+    font-size: 1.8em !important;
   }
 
-  .form-container {
-    padding: 8em;
-    width: 400px;
-    margin-left: 100px;
-  }
-
-  #registerForm {
-    padding: 4em;
-    max-width: 500px;
-    margin: 80px auto;
-  }
-
-  .t4 {
-    font-size: 3em;
-    margin-top: 300px;
-  }
-
-  .p3 {
-    font-size: 2em;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  header {
-    padding: 1.2rem 3rem;
-  }
-
-  .search-bar {
-    max-width: 700px;
-  }
-
-  .search-bar input[type="text"] {
-    font-size: 1.2rem;
-  }
-
-  .nav-btn {
-    font-size: 1.2rem;
-    padding: 1.5rem 0;
-  }
-
-  .i1 {
-    height: 80px;
-  }
-
-  #profileBtn,
-  #loginBtn,
-  #login-btn {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.5rem;
-  }
-
-  footer {
-    height: 350px;
+  .i7 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 10px !important;
   }
 
   body::before {
-    width: 1000px;
-    height: 900px;
-    right: -180px;
-    top: 0;
+    right: -50px !important;
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+   #myBooks,
+  #myReviews {
+    flex: 1;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 500;
+    justify-content: center;
+  }
+
+  #myBooks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-gap: 12px;
+    padding: 10px;
+  }
+
+  #myBooks > div {
+    background: rgb(115, 162, 173);
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  #book-details {
+    max-width: 100%;
+    margin: 40px auto 20px auto;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  #book-details img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+
+  #book-details h2 {
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  #book-details p {
+    font-size: 0.9rem;
+    color: #444;
+    text-align: center;
+  }
+
+  #book-details > div {
+    flex: unset;
+    display: block;
+  }
+
+  #interaction-area {
+    max-width: 100%;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+  }
+
+  #interaction-area textarea {
+    font-size: 0.9rem;
+    min-height: 80px;
+  }
+
+  #interaction-area button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  #rating span {
+    font-size: 1.1rem;
   }
 }
 
